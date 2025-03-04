@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css 3.css">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>Feel free to connect with me on the platforms below:</p>
+        
+        <div class="contact-grid">
+            <a href="https://www.facebook.com/sappa.manu" target="_blank" class="contact-card facebook">
+                <i class="fab fa-facebook"></i>
+                <h3>Facebook</h3>
+                <p>Manage Facebook Pages and Groups</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/contactmanoharshasappa/" target="_blank" class="contact-card linkedin">
+                <i class="fab fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <p>Manage LinkedIn Profiles</p>
+            </a>
+
+            <a href="https://github.com/ManoHarshaSappa" target="_blank" class="contact-card github">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <p>Explore and share code</p>
+            </a>
+
+            <a href="mailto:sappamanoharsha@gmail.com" class="contact-card email">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>Contact via email</p>
+            </a>
+
+            <a href="https://www.instagram.com/harsha_smh/" target="_blank" class="contact-card instagram">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p>Follow my journey</p>
+            </a>
+
+            <a href="https://www.youtube.com/@UsAlludu" target="_blank" class="contact-card youtube">
+                <i class="fab fa-youtube"></i>
+                <h3>YouTube</h3>
+                <p>Watch my videos</p>
+            </a>
+
+        
+        </div>
+    </div>
+     <!-- Back to the Page Button -->
+     <div class="button-container">
+        <button onclick="goBack()">Back to the Page</button>
+    </div>
+</body>
+
+
+</html>
+
+<script>
+    function goBack() {
+        if (document.referrer) {
+            window.location.href = document.referrer;
+        } else {
+            window.location.href = "index.html"; // Replace with your fallback page
+        }
+    }
+</script>

@@ -1,0 +1,1328 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 4px;
+    background-color: #6a0dad;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-right: 120px;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+/* Default Link Styles */
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    color: #FFD700; /* Golden color when hovered */
+}
+
+/* Active Link Effect */
+.nav-links a:active {
+    color: #FF4500; /* Reddish-orange when clicked */
+}
+
+
+@media only screen and (min-width: 601px) {
+    .menu-btn,
+    .close-btn {
+        display: none; /* Hide these buttons on big screens */
+    }
+}
+
+
+
+
+
+
+
+/* Hero Section */
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align content to the bottom */
+    background: linear-gradient(to bottom, #8249b5, #6a0dad);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 0 10%; /* Adjust padding */
+}
+
+/* Hero Content Wrapper */
+.hero-container {
+    display: flex;
+    align-items: flex-end; /* Ensures everything aligns at the bottom */
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+}
+
+/* Left Side: Profile Image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Push image to bottom */
+    height: 100%;
+}
+
+/* Modify Image */
+.hero-image img {
+    width: 250px; /* Increased size */
+    height: auto;
+    object-fit: cover;
+    margin-bottom: -30px; /* Fine-tuned bottom margin to align it properly */
+}
+
+
+/* Right Side: Hero Content */
+.hero-content {
+    flex: 2; /* Allows text to take more space */
+    color: #fff;
+}
+
+.hero-content .role {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFD700; /* Gold Text */
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 65px;
+    font-weight: bold;
+    margin: 0px 0;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: #00E5FF; /* Cyan Highlight */
+}
+
+/* Hero Description */
+.hero-content h2 {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #E0E0E0;
+}
+
+/* Specialization Tags */
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.tag {
+    background: #FFD700;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #E0E0E0;
+}
+
+.contact-item i {
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #E0E0E0;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #fff;
+}
+
+
+
+
+
+/* Wrapper for Skills and Education Sections */
+.skills-education-wrapper {
+    display: flex;
+    gap: 39px;
+    padding: 0px 5%;
+}
+
+/* Skills Section */
+.skills-section {
+    flex: 1; /* Make Skills section take equal space */
+    padding: 20px; /* Add spacing */ /* Light background */
+    text-align: center; /* Center-align content */
+}
+
+.section-title {
+    font-size: 30px;
+    color: black; /* Title color */
+    margin-bottom: 10px;
+}
+
+.skills-description {
+    font-size: 14px;
+    color: #555; /* Subtle text color */
+    margin-bottom: 30px;
+}
+
+/* Grid Layout for Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Uniform grid for skill items */
+    gap: 10px; /* Adjust spacing between items */
+    justify-items: center; /* Center-align each item */
+}
+
+/* Skill Item Styling */
+.skill-item {
+    display: flex;
+    flex-direction: column; /* Align icon and text vertically */
+    align-items: center; /* Center align */
+    justify-content: center;
+    background-color: #fff; /* White background for each skill */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skill-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Icon Styling */
+.skill-item i {
+    font-size: 40px; /* Icon size */
+    color: #6a0dad; /* Purple for icons */
+    margin-bottom: 10px;
+}
+
+/* Skill Text Styling */
+.skill-item span {
+    font-size: 9px;
+    color: #333; /* Dark text for skill name */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Education Section */
+.education-container {
+    flex: 1; /* Make Education section take equal space */
+    padding: 20px; /* Add spacing */
+    /* Light background */
+    color: black; /* Default text color */
+}
+
+/* Tab Title Section */
+.tab-title {
+    display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        margin: 9px 0 9px;
+}
+
+.tab-links {
+    font-size: 18px; /* Tab font size */
+    font-weight: 500; /* Font weight for emphasis */
+    cursor: pointer; /* Pointer cursor for tabs */
+    position: relative; /* For underline positioning */
+    color: #6a0dad; /* Default tab text color */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.tab-links:hover {
+    color: #ff004f; /* Change color on hover */
+}
+
+.tab-links::after {
+    content: ''; /* Underline effect */
+    width: 0;
+    height: 3px;
+    background: #ff004f; /* Underline color */
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s ease; /* Smooth underline animation */
+}
+
+/* Active Tab Title Underline */
+.tab-links.active-link::after {
+    width: 50%; /* Show underline for active tab */
+}
+
+/* Active Tab Title Text */
+.tab-links.active-link {
+    color: #ff004f; /* Active tab text color */
+}
+
+/* Tab Contents */
+.tab-contents {
+    display: none; /* Hide all tab content by default */
+    background-color: transparent; /* Transparent background */
+    padding: 20px; /* Padding inside the content */
+}
+
+.tab-contents.active-tab {
+    display: block; /* Show the active tab content */
+}
+
+/* List Styling */
+.tab-contents ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.tab-contents ul li {
+    list-style: none; /* Remove default list styling */
+    margin: 10px 0; /* Space between list items */
+    font-size: 16px; /* Default font size for items */
+    color: #555; /* Default text color */
+}
+
+.tab-contents ul li span {
+    color: #6a0dad; /* Highlighted text color */
+    font-size: 18px; /* Larger font size for headings */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-education-wrapper {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        gap: 20px; /* Adjust gap for stacked sections */
+    }
+
+    .skills-section,
+    .education-container {
+        padding: 20px 10%; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #333; /* Darker text for readability */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+/* Work Section */
+.work-section {
+    padding: 0px 7%;
+    background: #ffffff;
+    color: #333;
+}
+
+/* Sub-title */
+.sub-title {
+    font-size: 28px;
+    color: black; /* Purple for the title */
+    text-align: center;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 46px;
+    margin-bottom: 10px;
+}
+
+/* Project Item */
+.project-item {
+    background: #f5f5f5; /* Light gray for project cards */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 360px; /* Uniform height for all projects */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure proper spacing */
+}
+
+/* Project Item Image */
+.project-item img {
+    width: 100%; /* Fully responsive width */
+    height: 150px; /* Adjust height for uniformity */
+    object-fit: cover;
+    border-bottom: 3px solid #6a0dad; /* Purple border under images */
+}
+
+/* Project Title */
+.project-item h2 {
+    font-size: 20px; /* Title font size */
+    color: #333; /* Dark text for project title */
+    margin: 0; /* No margin for minimal spacing */
+    text-align: center;
+}
+
+/* Project Description */
+.project-item p {
+    font-size: 12px; /* Smaller font size */
+    color: #23486A; /* Fixed the color hex format */
+    margin-top: 0px; /* Add minimal spacing */
+    font-weight:bold;
+    padding: 0; /* No padding */
+    text-align: center;
+}
+
+
+
+/* Link Container */
+.link-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+}
+
+/* Links */
+.github-link, .website-link {
+    display: inline-block;
+    font-size: 10px; /* Font size for better visibility */
+    color: #ffffff; /* White text for the button */
+    background-color: #6a0dad; /* Purple background */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Padding for button look */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.github-link:hover, .website-link:hover {
+    background-color: #8249b5; /* Slightly lighter purple on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Hover Effects */
+.project-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.project-item:hover h2 {
+    color: #6a0dad; /* Purple for hover effect on title */
+}
+
+/* Read More Button */
+.read-more-btn {
+    background: #6a0dad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 20px auto; /* Center the button */
+}
+
+.read-more-btn:hover {
+    background: #8249b5; /* Slightly lighter purple on hover */
+}
+
+/* Hidden Projects */
+.hidden {
+    display: none; /* Initially hidden */
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 per line for hidden grid */
+    gap: 30px; /* Match gap with the visible grid */
+    margin-top: 20px; /* Add top margin to separate from visible projects */
+}
+
+
+
+
+/* Experience and Certificates Section */
+.experience-certificates {
+    display: flex;
+    gap: 10px;
+    background-color: #FBFBFB;
+    padding: 10px 5%;
+    align-items: flex-start;
+}
+
+/* Experience Box */
+.experience-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Added gap between experience entries */
+}
+
+.experience-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Experience Header */
+.experience-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6A0DAD;
+}
+
+
+
+
+.company-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.job-details {
+    font-size: 14px;
+    color: #777;
+
+}
+
+
+
+/* Job Details (Location Left, Duration Right) */
+.job-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Align Location to Left */
+.job-location {
+    text-align: left;
+    flex: 1;
+}
+
+/* Align Duration to Right */
+.job-duration {
+    text-align: right;
+    flex: 1;
+}
+
+
+
+
+
+/* Experience Description */
+.experience-description p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* Certificates Section */
+.certificates {
+    flex: 1;
+    padding-left: 20px;
+}
+
+/* Certificate Box */
+.certificate-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.certificate-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Certificate Header */
+.certificate-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+/* Title */
+.certificate-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6A0DAD;
+}
+
+/* Meta Data (Company & Date in One Line) */
+.certificate-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Certificate Description */
+.certificate-description p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* View Certificate Link (Aligned to Right) */
+.certificates-link {
+    display: block;
+    font-size: 14px;
+    color: #6A0DAD;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.certificates-link:hover {
+    color: #d4003c;
+}
+
+/* Initially Hide Extra Certificates */
+.hidden {
+    display: none;
+}
+
+/* Show More Button */
+#show-more-btn {
+    display: block;
+    width: 100%;
+    background: #6A0DAD;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#show-more-btn:hover {
+    background: #8249b5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Me Section */
+#contact {
+    padding: 60px 5%;
+    background: #fbfbfb; /* Light background color */
+    color: #333;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 20px;
+    font-size: 16px; /* Adjusted font size */
+    color: #555;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contact-left a {
+    color: #6a0dad; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-left a:hover {
+    color: #ff004f;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 28px; /* Slightly smaller size */
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.3s, color 0.3s ease;
+}
+
+.social-icons a:hover { 
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #ff004f;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn.btn2:hover {
+    background: #d4003c;
+    transform: translateY(-3px);
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 1px solid #ddd; /* Added border for clarity */
+    outline: none;
+    background: #ffffff; /* Light background for input */
+    padding: 15px;
+    margin: 15px 0;
+    color: #333;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for inputs */
+}
+
+form input:focus, form textarea:focus {
+    border: 1px solid #6a0dad;
+    box-shadow: 0px 0px 4px rgba(106, 13, 173, 0.5);
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact .row {
+        flex-direction: column;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .social-icons {
+        text-align: center;
+    }
+}
+
+
+.news-sec-wrapper {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #6A0DAD, #8B008B);
+}
+
+/* Newsletter Section */
+#newsletter-section {
+    background: linear-gradient(135deg, #6A0DAD, #8B008B);
+    color: white;
+    padding: 15px 0;
+    display: flex
+;
+}
+
+/* Left Content (Text) */
+.newsletter-container-left {
+    flex: 1; /* Occupies 50% width */
+    max-width: 50%; /* Limits the left container width */
+    padding-left: 9px; /* Add padding to move it to the right */
+}
+
+.newsletter-container-left h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+.newsletter-container-left p {
+    font-size: 14px;
+    margin-bottom: -10px;
+    padding-right: 40px;
+
+}
+
+
+
+
+
+/* Right Content (Form) */
+/* Right Content (Form) */
+.newsletter-container-right {
+    flex: 1; /* Occupies 50% width */
+    max-width: 50%; /* Limits the right container width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align form and note to the right */
+    padding-right: 10px;
+}
+
+/* Newsletter Form Styling */
+.newsletter-form {
+    display: flex;
+    gap: 10px; /* Space between input and button */
+    align-items: center; /* Align items vertically */
+    justify-content: flex-end; /* Align form to the right */
+    max-width: 800px; /* Set maximum width */
+    margin-left: auto; /* Push form to the right */
+    padding-left: 10px;
+    margin-bottom: -17px;
+}
+
+.newsletter-form input {
+    flex: 1; /* Allow input to take up available space */
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 25px 0 0 25px; /* Rounded left corners */
+    padding: 12px 20px; /* Padding inside the input */
+    font-size: 16px; /* Font size */
+    background-color: transparent; /* Transparent background */
+    color: #ffffff; /* White text */
+    outline: none; /* Remove default outline */
+    transition: border 0.3s ease; /* Smooth border change */
+}
+
+.newsletter-form input::placeholder {
+    color: #ffffff; /* Placeholder text color */
+    opacity: 0.8; /* Slightly lighter */
+}
+
+.newsletter-form input:focus {
+    border: 1px solid #ffcccc; /* Change border on focus */
+}
+
+.newsletter-form button {
+    background-color: #ffffff; /* White background */
+    border: none; /* Remove border */
+    border-radius: 0 25px 25px 0; /* Rounded right corners */
+    padding: 12px 25px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    color: #6A0DAD; /* Purple text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Align icon and text inside the button */
+    align-items: center; /* Center icon and text vertically */
+    gap: 5px; /* Space between icon and text */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth background and text color change */
+}
+
+.newsletter-form button:hover {
+    background-color: #6A0DAD; /* Purple background */
+    color: #ffffff; /* White text */
+}
+
+/* Submitted State */
+.newsletter-form button.submitted {
+    background-color: #61b752; /* Green background for success */
+    color: #ffffff; /* White text for success */
+    cursor: not-allowed; /* Disable further clicks */
+}
+
+.newsletter-form button.error {
+    background-color: #ff0000; /* Red background for error */
+    color: #ffffff; /* White text for error */
+    cursor: not-allowed; /* Disable further clicks */
+}
+
+.newsletter-form button i {
+    font-size: 16px; /* Icon size */
+    color: #6A0DAD; /* Purple icon color */
+}
+
+.newsletter-form button:hover i {
+    color: #ffffff; /* White icon on hover */
+}
+
+.newsletter-note {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+    text-align: right;
+    padding-right: 55px;
+}
+
+
+
+/* Footer Section */
+#footer-section {
+    background: #000;
+    color: white;
+    padding: 7px 0px;
+}
+
+.footer-container {
+    display: grid; /* Space between left and right */
+    grid-template-columns: 1fr 1fr;
+    align-items: center; /* Center align items vertically */
+    margin-bottom: 20px; /* Space below this section */
+    
+}
+
+/* Logo and Tagline */
+.footer-logo {
+    
+}
+
+.footer-logo h1 {
+    font-size: 24px;
+    margin: 0;
+    color: white; /* Set the text color */
+}
+
+.footer-logo h1 strong {
+    font-weight: bold; /* Bold for 'iHarsh' */
+}
+
+.footer-logo h1 span {
+    font-size: 16px; /* Smaller font for tagline */
+    font-weight: normal; /* Normal weight for tagline */
+    opacity: 0.8; /* Slightly lighter text for the tagline */
+    margin-left: 10px; /* Add space between 'iHarsh' and the tagline */
+}
+/* Social Media Links */
+.footer-social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    justify-content: flex-end; /* Push icons close to the logo */
+
+}
+
+.footer-social-icons a {
+    font-size: 20px; /* Set icon size */
+    color: white; /* Default white color for icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-social-icons a:hover {
+    color: #6A0DAD; /* Change to purple color on hover */
+    transform: scale(1.1); /* Slight scaling on hover */
+}
+
+
+/* Footer Menu */
+.footer-menu {
+    display: flex;
+    justify-content: center; /* Center align the menu */
+    gap: 15px; /* Space between menu items */
+    margin-bottom: 20px; /* Space between menu and copyright */
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px; /* Padding for a button-like appearance */
+    border: 1px solid white; /* Add border to menu items */
+    border-radius: 20px; /* Rounded corners for menu items */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.footer-menu a:hover {
+    background: white; /* White background on hover */
+    color: black; /* Black text on hover */
+    transform: scale(1.1); /* Slight scaling on hover */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* Add subtle shadow on hover */
+}
+/* Footer Copyright */
+.footer-copyright {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.6; /* Slightly lighter text */
+    margin: 0; /* No extra space below */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Phone screen *//* Phone screen *//* Phone screen *//* Phone screen *//* Phone screen *//* Phone screen */
+
+@media only screen and (max-width: 600px) {
+    /* Navigation Bar */
+    /* Header Styling */
+/* Navigation Bar Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Navigation Menu */
+.nav-links {
+    position: fixed;
+    top: 0; /* Align to top */
+    right: -100%; /* Initially hidden off-screen */
+    height: 100%;
+    width: 250px; /* Width of the menu */
+    background-color: #6A0DAD; /* Background color for the menu */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the left inside the menu */
+    justify-content: flex-start; /* Align links to the top */
+    padding-top: 20px; /* Add padding at the top */
+    transition: right 0.3s ease-in-out; /* Smooth sliding animation */
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+
+/* Individual Links */
+.nav-links li {
+    list-style: none; /* Remove default list styles */
+    margin: 10px 20px; /* Add margin for spacing */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Golden hover effect */
+}
+
+/* Open Navigation */
+.nav-links.open {
+    right: 0; /* Slide into view */
+}
+
+/* Menu Button */
+.menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    display: block; /* Ensure it's visible */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 16px; /* Smaller logo for smaller screens */
+    }
+
+    .nav-links {
+        width: 80%; /* Wider menu for smaller screens */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Adjust link size */
+    }
+
+    .menu-btn {
+        font-size: 20px; /* Adjust menu button size */
+    }
+}
+
+
+/* Close Button Styling */
+.close-btn {
+    position: absolute;
+    top: 15px; /* Position close button near the top */
+    right: 20px; /* Position close button near the right edge */
+    font-size: 24px; /* Close button size */
+    cursor: pointer;
+    color: #fff; /* White color */
+    display: block;
+}
+
+.close-btn i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close-btn i:hover {
+    color: #FFD700; /* Golden color on hover */
+    transform: scale(1.2); /* Slight scaling effect */
+}
+
+
+
+
+
+
+    /* Hero Section *//* Hero Section *//* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: row; /* Align content horizontally */
+    justify-content: space-between; /* Push content to edges */
+    align-items: right; /* Center items vertically */
+    padding: 50px 20px; /* Add spacing around the section */
+    background: linear-gradient(to bottom, #6a0dad, #8249b5); /* Background gradient */
+    color: #fff; /* White text */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Content */
+.hero-content {
+    flex: 1; /* Take up equal space */
+    padding-left: 50px; /* Space from the left */
+    text-align: left; /* Align text to the left */
+    max-width: 60%; /* Limit the width of the text */
+}
+
+.hero-content p {
+    font-size: 20px; /* Slightly larger font for emphasis */
+    font-weight: bold;
+    margin-bottom: 10px; /* Add spacing below */
+}
+
+.hero-content h1 {
+    font-size: 45px; /* Larger font for the headline */
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.3; /* Improve line spacing */
+}
+
+.hero-content h1 span {
+    color: #00E5FF; /* Highlight color for 'Harsh' */
+}
+
+.hero-content h2 {
+    font-size: 18px; /* Adjust font size for the description */
+    font-weight: normal;
+    line-height: 1.8; /* Improve readability */
+    color: #E0E0E0; /* Softer white for description text */
+    margin-top: 20px;
+    max-width: 90%; /* Limit width for better readability */
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1; /* Take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%; /* Adjust image width */
+    padding-right: 50px; /* Space from the right */
+}
+
+.hero-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+}
+
+
+
+
+
+
+
+    /* Projects Section */
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px; /* Adjust spacing */
+    }
+
+    .project-item {
+        height: auto; /* Allow auto height */
+        padding: 15px;
+    }
+
+    .project-item img {
+        height: 120px; /* Reduce image height */
+    }
+
+    /* Newsletter Section */
+    #newsletter-section {
+        flex-direction: column; /* Stack elements */
+        padding: 20px;
+    }
+
+    .newsletter-container-left,
+    .newsletter-container-right {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Stack input and button */
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%; /* Full-width elements */
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr; /* Stack elements */
+        text-align: center;
+    }
+
+    .footer-social-icons {
+        justify-content: center; /* Center-align icons */
+        margin-top: 10px;
+    }
+
+    .footer-menu {
+        flex-wrap: wrap; /* Wrap menu items */
+        gap: 10px;
+    }
+}

@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* About Container */
+.about-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #8B008B;
+    padding-bottom: 10px;
+}
+
+.about-container p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-container h2 {
+    text-align: center;
+}
+
+.about-container li{
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+
+.skills-container {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 0px 20px;
+    font-style: bold;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Back Button */
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #6A0DAD;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #8B008B;
+}
+
+/* Footer Social Icons */
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.footer-social-icons a {
+    text-decoration: none;
+    color: #6A0DAD;
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #8B008B;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 15px;
+    }
+
+    .about-container h1 {
+        font-size: 2em;
+    }
+
+    .about-container p,
+    .about-container ul li {
+        font-size: 1em;
+    }
+
+    .about-container h2 {
+        font-size: 1.5em;
+    }
+
+    .footer-social-icons a {
+        font-size: 1.3em;
+    }
+}

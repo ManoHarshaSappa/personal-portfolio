@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iHarsh</title>
+    <!-- Import Playfair Display Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Import Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="header">
+        <!-- Logo -->
+        <div class="logo">iHarsh</div>
+    
+        <!-- Menu Button -->
+        <div class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+            <li class="close-btn"><i class="fas fa-times" id="closeMenu"></i></li> <!-- Close Button -->
+            <li><a href="#hero-section">Home</a></li>
+            <li><a href="#work-section">Projects</a></li>
+            <li><a href="https://www.linkedin.com/in/contactmanoharshasappa/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/ManoHarshaSappa" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.youtube.com/@UsAlludu" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            <li><a href="https://www.instagram.com/harsha_smh/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+    </nav>
+    
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+        const closeMenu = document.getElementById("closeMenu");
+    
+        // Open the menu
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.add("open");
+        });
+    
+        // Close the menu
+        closeMenu.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+        });
+    
+        // Optional: Close the menu when clicking on a link
+        navLinks.addEventListener("click", (e) => {
+            if (e.target.tagName === "A") {
+                navLinks.classList.remove("open");
+            }
+        });
+    </script>
+
+
+
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero-section">
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <p>Data Analytics Graduate Student</p>
+            <h1>Hi, I'm <span>Harsh</span><br></h1>
+            
+            <h2>
+                Results-driven Data Analyst with a Master’s in Data Analytics Engineering and hands-on experience in Python, SQL, and predictive modeling. Adept at extracting meaningful insights from complex datasets using Tableau, Power BI, and AWS. Passionate about applying data-driven decision-making to enhance business strategies and streamline operational efficiency.
+            </h2>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="hero-image">
+            <img src="Photos/website_picture.png" alt="Illustration">
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+<div class="skills-education-wrapper">
+    <!-- Skills Section -->
+<div id="skills" class="skills-section">
+    <h2 class="section-title">Skills</h2>
+    <p class="skills-description">
+        I have expertise in a variety of technologies, programming languages, and frameworks. Here are some of the skills I possess:
+    </p>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Data Analysis</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-brands fa-python"></i>
+            <span>Python (Programming Language)</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-database"></i>
+            <span>Microsoft SQL Server</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-brain"></i>
+            <span>Machine Learning</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-chart-bar"></i>
+            <span>Data Visualization</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span>Business Intelligence Tools</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-database"></i>
+            <span>Data Modeling</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-table"></i>
+            <span>Tableau</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Microsoft Power BI</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-server"></i>
+            <span>Data Warehousing</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-gears"></i>
+            <span>Data Engineering</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-cloud"></i>
+            <span>Cloud Computing (AWS, Azure)</span>
+        </div>
+        <div class="skill-item">
+            <i class="fa-solid fa-file-excel"></i>
+            <span>Microsoft Excel</span>
+        </div>
+    </div>
+</div>
+    <!-- Education Section -->
+    <div id="education" class="education-container">
+        <h1 class="sub-title">Professional Education</h1>
+        <!-- Tab Titles -->
+        <div class="tab-title">
+            <p class="tab-links active-link" onclick="openTab(event, 'Masters')">Master's</p>
+            <p class="tab-links" onclick="openTab(event, 'Btech')">B.Tech</p>
+            <p class="tab-links" onclick="openTab(event, 'Intermediate')">Intermediate</p>
+            <p class="tab-links" onclick="openTab(event, 'School')">School</p>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="tab-contents active-tab" id="Masters">
+            <ul>
+                <li><span>Institution:</span><br>George Mason University, Fairfax, VA, USA</li>
+                <li><span>Duration:</span><br>Jan 2024 - May 2026</li>
+                <li><span>Relevant Courses:</span><br>Machine Learning, Applied Statistics, Data Mining, Visualization for Analytics</li>
+            </ul>
+        </div>
+
+        <div class="tab-contents" id="Btech">
+            <ul>
+                <li><span>Institution:</span><br>SR Gudlavalleru Engineering College, India</li>
+                <li><span>Duration:</span><br>Jun 2018 - Apr 2022</li>
+                <li><span>Relevant Courses:</span><br>Data Structures, Linear Algebra, Computer Programming, Probability Theory</li>
+            </ul>
+        </div>
+
+        <div class="tab-contents" id="Intermediate">
+            <ul>
+                <li><span>Institution:</span><br>Sri Chaitanya Junior College, Eluru</li>
+                <li><span>Duration:</span><br>2016 - 2018</li>
+                <li><span>Relevant Courses:</span><br>Mathematics, Physics, Chemistry, Foundational Problem-Solving</li>
+            </ul>
+        </div>
+
+        <div class="tab-contents" id="School">
+            <ul>
+                <li><span>Institution:</span><br>Kendriya Vidyalaya, Eluru, India</li>
+                <li><span>Duration:</span><br>Jan 2015 - 2016</li>
+                <li><span>Learnings:</span><br>Basics of Python, Operating Systems, Computer Communication, Interpersonal Skills</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(event, tabName) {
+    // Hide all tab contents
+    const tabContents = document.querySelectorAll('.tab-contents');
+    tabContents.forEach((content) => content.classList.remove('active-tab'));
+
+    // Remove active-link class from all tab links
+    const tabLinks = document.querySelectorAll('.tab-links');
+    tabLinks.forEach((link) => link.classList.remove('active-link'));
+
+    // Show the selected tab content
+    document.getElementById(tabName).classList.add('active-tab');
+
+    // Add active class to the clicked tab link
+    event.currentTarget.classList.add('active-link');
+}
+</script>
+
+
+
+
+<!-- Projects Section -->
+
+<!-- Projects Section -->
+<div id="work-section" class="work-section">
+    <div class="container">
+        <!-- Projects Section -->
+        <div class="projects">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-grid" id="projectGrid">
+                <!-- Initial 3 Projects -->
+                <div class="project-item">
+                    <img src="Photos/1 Project.png" alt="Project 1">
+                    <h2>DARIA-3o</h2>
+                    <p>A powerful AI chatbot revolutionizing information access on InfoTunnel.</p>
+                    <div class="link-container">
+                        <a class="github-link" href="https://github.com/ManoHarshaSappa/Chatbot_for_Infotunnel" target="_blank">
+                            <i class="fa-sharp fa-solid fa-code-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="Photos/2 Project.png" alt="Project 2">
+                    <h2>Bridges at Risk</h2>
+                    <p>Coastal vs. Inland Environmental Impacts on Lifespan and Maintenance.</p>
+                    <div class="link-container">
+                        <a class="github-link" href="https://github.com/ManoHarshaSappa/coastal_versus_inland_environmental_impacts_on_lifespan_and_maintenance" target="_blank">
+                            <i class="fa-sharp fa-solid fa-code-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="Photos/3 Project.png" alt="Project 3">
+                    <h2>Traffic Collision Analysis in Montgomery County</h2>
+                    <p>Exploring trends, insights, and predictions to enhance road safety through data-driven analysis.</p>
+                    <div class="link-container">
+                        <a class="github-link" href="https://github.com/ManoHarshaSappa/Traffic-Collision-Analysis-in-Montgomery-County" target="_blank">
+                            <i class="fa-sharp fa-solid fa-code-github"></i> View on GitHub
+                        </a>
+                        <a class="website-link" href="https://manoharshasappa.github.io/Traffic-Collision-Analysis-in-Montgomery-County/fp.html" target="_blank">
+                            <i class="fa-solid fa-globe"></i> Visit Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Projects (Loaded on Click) -->
+            <div class="project-grid hidden" id="hiddenProjects">
+                <div class="project-item">
+                    <img src="Photos/4 Project.png" alt="Project 4">
+                    <h2>Redesigning Graphs for Enhanced Clarity and Insight</h2>
+                    <p>Elevating misleading charts into powerful, intuitive visuals to reveal deeper insights and drive better decisions.</p>
+                    <div class="link-container">
+                        <a class="github-link" href="https://github.com/ManoHarshaSappa/Redesigning-Graphs-for-Enhanced-Clarity-and-Insight" target="_blank">
+                            <i class="fa-sharp fa-solid fa-code-github"></i> View on GitHub
+                        </a>
+                        <a class="website-link" href="https://manoharshasappa.github.io/Redesigning-Graphs-for-Enhanced-Clarity-and-Insight/Bad-Graph.html" target="_blank">
+                            <i class="fa-solid fa-globe"></i> Visit Website
+                        </a>
+                    </div>
+                </div>
+
+              
+                <div class="project-item">
+                    <img src="Photos/5 Project.png" alt="Project 5">
+                    <h2>Smart Library Management System</h2>
+                    <p>Revolutionizing library operations with an efficient system for managing resources, streamlining tasks, and enhancing user experience</p>
+                    <div class="link-container">
+                        <a class="github-link" href="https://github.com/ManoHarshaSappa/Library_Management_System" target="_blank">
+                            <i class="fa-sharp fa-solid fa-code-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="Photos/6 Project.png" alt="Optimized Recycling Management for NYC">
+                    <h2>Optimized Recycling Management for NYC</h2>
+                    <p>Analyzing NYC's recycling trends to enhance sustainability and improve waste management efficiency</p>
+                    <div class="link-container">
+                        <a class="github-link" href="https://github.com/ManoHarshaSappa/Enhancing_Resource_Management" target="_blank">
+                            <i class="fa-sharp fa-solid fa-code-github"></i> View on GitHub
+                        </a>
+                    </div>
+                    
+                </div>
+                   <!-- Hidden Projects (Loaded on Click) -->
+            </div>
+            <button class="read-more-btn" id="readMoreBtn">Read More</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const readMoreBtn = document.getElementById("readMoreBtn");
+const hiddenProjects = document.getElementById("hiddenProjects");
+
+readMoreBtn.addEventListener("click", () => {
+    if (hiddenProjects.classList.contains("hidden")) {
+        hiddenProjects.classList.remove("hidden"); // Show hidden projects
+        readMoreBtn.textContent = "Show Less"; // Update button text
+    } else {
+        hiddenProjects.classList.add("hidden"); // Hide projects
+        readMoreBtn.textContent = "Read More"; // Reset button text
+    }
+});
+</script>
+
+
+
+
+<!-- Experience and Certificates Section -->
+<section id="experience-certificates" class="experience-certificates">
+
+    <!-- Experience Section (Left) -->
+    <div class="experience">
+        <h1 class="sub-title">Work Experience</h1>
+    
+        <!-- Experience 1: Data Science Intern -->
+        <div class="experience-box">
+            <div class="experience-header">
+                <div class="job-title">Data Science Intern</div>
+                <div class="company-name">Corizo EduTech Private Limited</div>
+                <div class="job-details">
+                    <span class="job-location">Remote - Bengaluru, India</span>
+                    <span class="job-duration">April 2023 - October 2023</span>
+                </div>
+            </div>
+            <div class="experience-description">
+                <p>Developed machine learning models, automated workflows, and optimized data processing to enhance analytics efficiency.</p>
+            </div>
+        </div>
+    
+        <!-- Experience 2: Internship in Web Application Development -->
+        <div class="experience-box">
+            <div class="experience-header">
+                <div class="job-title">Internship in Web Application Development</div>
+                <div class="company-name">MANAC Infotech Private Limited</div>
+                <div class="job-details">
+                    <span class="job-location">Hyderabad, Telangana, India - On-site</span>
+                    <span class="job-duration">Feb 2023 - May 2023</span>
+                </div>
+            </div>
+            <div class="experience-description">
+                <p>Focused on Web Application Development, gaining strong skills in programming, database management, and problem-solving.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="certificates">
+        <h1 class="sub-title">Certificates</h1>
+    
+        <div class="certificate-container">
+            <!-- Certificate 1 (Always Visible) -->
+            <div class="certificate-box">
+                <div class="certificate-header">
+                    <div class="certificate-title">Business Analysis Foundations</div>
+                    <div class="certificate-meta">
+                        <span class="certificate-company">LinkedIn Learning</span>
+                        <span class="certificate-time">Feb 2025</span>
+                    </div>
+                </div>
+                <div class="certificate-description">
+                    <p>Completed Business Analysis course covering stakeholder engagement, business intelligence tools, and data-driven decision-making.</p>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1j2Df-V8uNhhYKnIWA18X803LWo0zB7YT?usp=sharing" class="certificates-link" target="_blank">View Certificate</a>
+            </div>
+    
+            <!-- Certificate 2 (Always Visible) -->
+            <div class="certificate-box">
+                <div class="certificate-header">
+                    <div class="certificate-title">Introduction to Career Skills in Data Analytics</div>
+                    <div class="certificate-meta">
+                        <span class="certificate-company">LinkedIn Learning</span>
+                        <span class="certificate-time">Feb 2025</span>
+                    </div>
+                </div>
+                <div class="certificate-description">
+                    <p>Gained foundational skills in data analytics, including Microsoft Power BI, data analysis, governance, and quality.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1eihuQhRUKF2TSf7Fa_skLi3w9_CThklc/view?usp=sharing" class="certificates-link" target="_blank">View Certificate</a>
+            </div>
+    
+            <!-- Hidden Certificates (Initially Hidden) -->
+            <div id="hidden-certificates" class="hidden">
+                <!-- Certificate 3 -->
+                <div class="certificate-box">
+                    <div class="certificate-header">
+                        <div class="certificate-title">DevOps Foundations: Microservices</div>
+                        <div class="certificate-meta">
+                            <span class="certificate-company">CompTIA</span>
+                            <span class="certificate-time">Feb 2025</span>
+                        </div>
+                    </div>
+                    <div class="certificate-description">
+                        <p>Explored DevOps and Microservices covering CI/CD, Docker, Kubernetes, Terraform, Ansible, AWS, GCP, and Azure.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1i--_4RQgfKxHetuYNk1l_smiM9KIPKSF?usp=sharing" class="certificates-link" target="_blank">View Certificate</a>
+                </div>
+    
+                <!-- Certificate 4 -->
+                <div class="certificate-box">
+                    <div class="certificate-header">
+                        <div class="certificate-title">Research Paper Presentation and Best Paper Award</div>
+                        <div class="certificate-meta">
+                            <span class="certificate-company">CITAES’22</span>
+                            <span class="certificate-time">Jul 2022</span>
+                        </div>
+                    </div>
+                    <div class="certificate-description">
+                        <p>Presented research on computational techniques at the International Conference on Computational and Intelligent Techniques for Automation of Engineering Systems.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1FHfpwpwcYncgg9IqPKrNRHKV70qqZ0hr?usp=sharing" class="certificates-link" target="_blank">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    
+    
+
+            <!-- Show More Button -->
+            <button id="show-more-btn">Show More</button>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+document.getElementById("show-more-btn").addEventListener("click", function () {
+    const hiddenCertificates = document.getElementById("hidden-certificates");
+    if (hiddenCertificates.style.display === "none" || hiddenCertificates.style.display === "") {
+        hiddenCertificates.style.display = "block";
+        this.textContent = "Show Less";
+    } else {
+        hiddenCertificates.style.display = "none";
+        this.textContent = "Show More";
+    }
+});
+</script>
+
+
+
+
+<!-- Newsletter Section -->
+<div class="news-sec-wrapper"><section id="newsletter-section">
+    
+    <div class="newsletter-container-left">
+        <h2>Stay Connected with Me!</h2>
+        <p>Be the first to know about my latest projects, updates, and insights. Let's build something amazing together!</p>
+    </div>
+
+<!-- Contact Information -->
+<div class="newsletter-container-right">
+    <form name="submit-to-google-sheet-W1" class="newsletter-form">
+        <input type="email" name="Email" placeholder="Email Address" required>
+        <button type="submit" class="btn" id="submitButton">Submit</button>
+    </form>
+    <p class="newsletter-note"> Drop your email & I’ll reach out to you!</p>
+</div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwwiixytdoEmJM0Dl9rZ2r0LHJqBm4ko23bT6zSirBg8nt3xLKeh-L8HftU4fpYt4or/exec';
+    const form = document.querySelector('form[name="submit-to-google-sheet-W1"]');
+    const submitButton = document.getElementById("submitButton");
+
+    form.addEventListener('submit', e => {
+        e.preventDefault(); // Prevent default form submission
+
+        // Show loading state
+        submitButton.textContent = "Submitting...";
+        submitButton.style.backgroundColor = "#ffa500"; // Orange for loading
+        submitButton.style.color = "#fff"; // White text for visibility
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                console.log('Success!', response);
+                // Change button to success state
+                submitButton.textContent = "Submitted!";
+                submitButton.style.backgroundColor = "#61b752"; // Green for success
+                submitButton.style.color = "#fff"; // White text for visibility
+                setTimeout(() => {
+                    submitButton.textContent = "Submit"; // Reset to default
+                    submitButton.style.backgroundColor = "#ffffff"; // Default white
+                    submitButton.style.color = "#6A0DAD"; // Default purple
+                }, 3000); // Reset after 3 seconds
+                form.reset(); // Reset the form
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                // Change button to error state
+                submitButton.textContent = "Error!";
+                submitButton.style.backgroundColor = "#ff4d4d"; // Red for error
+                submitButton.style.color = "#fff"; // White text for visibility
+                setTimeout(() => {
+                    submitButton.textContent = "Submit"; // Reset to default
+                    submitButton.style.backgroundColor = "#ffffff"; // Default white
+                    submitButton.style.color = "#6A0DAD"; // Default purple
+                }, 3000); // Reset after 3 seconds
+            });
+    });
+</script>
+
+
+    <!-- Untill Here -->
+
+</section></div>
+<!-- Footer Section -->
+<footer id="footer-section" class="footer">
+    <div style="display: grid; justify-content: center;"><div class="footer-container">
+        <!-- Logo and Tagline -->
+        <div class="footer-logo">
+            <h1>iHarsh <span>Thank you for visiting my website! ❤️</span></h1>
+        </div>
+        
+
+
+
+        <!-- Social Media Links -->
+        <div class="footer-social-icons">
+            <a href="https://www.linkedin.com/in/contactmanoharshasappa/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.youtube.com/@UsAlludu" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/harsha_smh/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div></div>
+
+    <!-- Footer Menu -->
+    <div class="footer-menu">
+        <a href="#hero-section">Home</a>
+        <a href="about.html" target="_blank">About</a>
+        <a href="contact.html">Contact Info</a>
+        <a href="#">Privacy Policy</a>
+    </div>
+
+
+    <!-- Copyright -->
+    <p class="footer-copyright">
+        Copyright &copy; | All Rights Reserved | Harsh
+    </p>
+</footer>
